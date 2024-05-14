@@ -4,8 +4,6 @@ const SurveyModel = require("../../models/Survey");
 const submitAnswer = async (req, res) => {
   const { email, firstMetricAnswer, secondMetricAnswer, surveyId } = req.body;
 
-  console.log(firstMetricAnswer);
-
   AnswerModel.create({
     email: email,
     firstMetricAnswer: firstMetricAnswer,

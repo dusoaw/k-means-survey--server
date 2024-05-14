@@ -3,6 +3,7 @@ const { JWT_TK } = require("../secrets");
 
 exports.cookieJwtAuth = (req, res, next) => {
   const token = req.cookies.token;
+
   try {
     const user = jwt.verify(token, JWT_TK);
     req.user = user;

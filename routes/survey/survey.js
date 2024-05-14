@@ -45,7 +45,7 @@ const getSurveyById = async (req, res) => {
   const { surveyId } = req.params;
 
   const survey = await SurveyModel.findOne({ _id: surveyId });
-  console.log(surveyId);
+
   if (survey) {
     res.status(200).json({ survey: survey });
   } else {
